@@ -11,23 +11,18 @@ body {
     display: block;
     width: 100%;
   }
-.omglassbild {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 50%; 
-}
 
 /* CSS grid */
-.grid-container {
+.grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto auto auto auto auto;
+    grid-template-rows: 70px auto auto auto auto;
     grid-template-areas: 
       "header header" 
       "omslagsbild omslagsbild"
       "omglass omglass"
-      "höger vänster" 
+      "vänster höger" 
+      "vänster1 höger1"
       "footer footer";
 }
 .header {
@@ -38,17 +33,36 @@ body {
 }
 .omglass {
     grid-area: omglass;
-    background: turquoise;
-}
-.höger {
-    grid-area: höger;
-    background-color: rgb(255, 68, 68);
-    height: 100%;
-    background-size: 960px; 
-    background-position: 960px;
 }
 .vänster {
     grid-area: vänster;
+    justify-self: right;
+    margin-right: 20px;
+    margin-top: auto;
+    margin-bottom: auto;
+    width: 560px;
+}
+.höger {
+    grid-area: höger;
+    margin-left: 20px;
+    margin-top: auto;
+    margin-bottom: auto;
+    width: 560px;
+}
+.vänster1 {
+    grid-area: vänster1;
+    justify-self: right;
+    margin-left: 20px;
+    margin-top: auto;
+    margin-bottom: auto;
+    width: 500px;
+}
+.höger1 {
+    grid-area: höger1;
+    margin-right: 20px;
+    margin-top: auto;
+    margin-bottom: auto;
+    width: 500px;
 }
 .footer {
     grid-area: footer;
@@ -57,7 +71,7 @@ body {
 /* Navbar start */
 .navbar {
     font-size: 16px;
-    background: beige;
+    background: rgb(255, 255, 255);
     padding-bottom: 10px;
     height: 70px;
     display: flex;
@@ -98,10 +112,9 @@ a:active {
 a:hover {
     opacity: 100%;
 }
-/* Navbar slut */
 
 /* Omslagsbild */
-#omslagsbild {
+.omslagsbildbild {
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -112,12 +125,20 @@ a:hover {
 /* Text om glass */
 h1 {
     font-size: 48px;
-    margin-top: 130px;
+    margin-top: 140px;
     text-align: center;
 }
 .om-glass {
     font-size: 16px;
     text-align: center;
     margin-top: 1em;
-    margin-bottom: 130px;
+    margin-bottom: 140px;
+}
+
+h2 {
+    font-size: 360;
+}
+.beskrivning {
+    font-size: 40;
+    font-weight: 700;
 }
