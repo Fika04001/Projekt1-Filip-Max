@@ -18,7 +18,7 @@ body {
     grid-template-rows: 70px auto auto auto auto auto 250px;
     grid-template-areas: 
       "nav nav" 
-      "omslagsbild omslagsbild"
+      "main main"
       "omglass omglass"
       "vanster hoger" 
       "vanster1 hoger1"
@@ -30,8 +30,8 @@ nav {
     padding-left: 250px;
     padding-right: 250px;
 }
-omslagsbild {
-    grid-area: omslagsbild;
+main {
+    grid-area: main;
 }
 omglass {
     grid-area: omglass;
@@ -173,6 +173,13 @@ h2 {
     margin-bottom: 8px;
 }
 
+
+/*Bestämmer tabellrubrikens textstorlek, vänsterjusterar texten, skapar en marginal under*/
+caption{
+    font-size: 22px;
+    text-align: left;
+    margin-bottom: 11px;
+}
 /*Ger tabellen en gräns, bestämmer dess bredd, ger tabellen symetriskt utseende*/
 table{
     border-collapse: collapse;
@@ -182,59 +189,53 @@ table{
     border:solid black 1px;
     border-spacing: 0px;  
 }
-
 /*Skapar en kant runt olika delar i tabellen, gör dess bredd automatisk, ger varje rad höjden 35px*/
 td{
     border: 1px solid black;
     width: auto;
     height: 35px;
 }
-
 /*Gör att den högra texten i tabellen centreras*/
 td:nth-child(2), td:nth-child(3){
     margin-left: 20px;
     text-align: left;
 }
-
 /*Ger varannan rad i tabellen bakgrundsfärgen ljusblå*/
 tr:nth-child(odd){
-    background-color: lightblue;
+    background-color: #ffa9c6;
 }
-
 /*Ändrar bakgrunds- och textfärgen på varannan rad i tabellen*/
 tr:nth-child(even){
     background-color: rgb(226, 90, 90);
     color: rgb(0, 0, 0);
 }
 
-/*Bestämmer tabellrubrikens textstorlek, vänsterjusterar texten, skapar en marginal under*/
-caption{
-    font-size: 22px;
-    text-align: left;
-    margin-bottom: 11px;
-}
+
+
+
 /*knapp*/
 a[href^="https://ingmanglass.se/glass-och-halsan/"]{
-    background-color: #a6e891;
-    color: white;
-    padding: 13px 32px;
-    text-align: center;
     display: inline-block;
+    background-color: #a6e891;
+    border-radius: 5px;
+    border: none;
+    color: #eeeeee;
+    text-align: center;
     font-size: 16px;
+    padding: 13px 32px;
+    width: 100px;
     cursor: pointer;
     margin-top: 1em;
     margin-bottom: 140px;
-    border-radius: 5px;
     width:8%;
     margin-left:46%;
     margin-right:46%;
+    text-decoration: none;
 }
-button {
-    background-color: #a6e891;
-    border: none;
-    color: white;
-    cursor: pointer;
-}
+
+
+
+
 .centrera {
     margin-left: auto;
     margin-right: auto;
@@ -254,7 +255,7 @@ footer {
     color: black;
 }
 strong {
-    font-weight:600
+    font-weight:600;
 }
 .margin {
     margin-bottom: 100px;
