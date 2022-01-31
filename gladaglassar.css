@@ -1,11 +1,10 @@
 * {
-    margin: 0;
     padding: 0;
+    margin: 0;
     box-sizing: border-box;
-}
-body {
     font-family: Arial, Helvetica, sans-serif;
-    font-weight: 400;
+    font-weight: 400; 
+    background-color: white;
 }
 .center {
     display: block;
@@ -13,95 +12,123 @@ body {
   }
 
 /* CSS grid */
-.grid {
+body {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 70px auto auto auto auto;
+    grid-template-rows: 70px auto auto auto auto auto 250px;
     grid-template-areas: 
-      "header header" 
+      "nav nav" 
       "omslagsbild omslagsbild"
       "omglass omglass"
-      "vänster höger" 
-      "vänster1 höger1"
+      "vanster hoger" 
+      "vanster1 hoger1"
+      "vanster2 hoger2"
       "footer footer";
 }
-.header {
-    grid-area: header;
+nav {
+    grid-area: nav;
+    padding-left: 250px;
+    padding-right: 250px;
 }
-.omslagsbild {
+omslagsbild {
     grid-area: omslagsbild;
 }
-.omglass {
+omglass {
     grid-area: omglass;
 }
-.vänster {
-    grid-area: vänster;
+vanster {
+    grid-area: vanster;
     justify-self: right;
     margin-right: 20px;
     margin-top: auto;
     margin-bottom: auto;
     width: 560px;
 }
-.höger {
-    grid-area: höger;
+hoger {
+    grid-area: hoger;
     margin-left: 20px;
     margin-top: auto;
     margin-bottom: auto;
     width: 560px;
 }
-.vänster1 {
-    grid-area: vänster1;
+vanster1 {
+    grid-area: vanster1;
     justify-self: right;
     margin-left: 20px;
     margin-top: auto;
     margin-bottom: auto;
-    width: 500px;
+    width: 560px;
 }
-.höger1 {
-    grid-area: höger1;
+hoger1 {
+    grid-area: hoger1;
     margin-right: 20px;
     margin-top: auto;
     margin-bottom: auto;
-    width: 500px;
+    width: 560px;
 }
-.footer {
+vanster2 {
+    grid-area: vanster2;
+    justify-self: right;
+    margin-right: 20px;
+    margin-top: auto;
+    margin-bottom: auto;
+    width: 560px;
+}
+hoger2 {
+    grid-area: hoger2;
+    margin-left: 20px;
+    margin-top: auto;
+    margin-bottom: auto;
+    width: 560px;
+}
+footer {
     grid-area: footer;
+    margin-top: 100px;
+    padding-top: 40px;
+    padding-left: 250px;
+    padding-right: 250px;
 }
 
 /* Navbar start */
 .navbar {
     font-size: 16px;
-    background: rgb(255, 255, 255);
+    background: #ffa9c6;
     padding-bottom: 10px;
     height: 70px;
     display: flex;
     justify-content: space-between;
     padding-bottom: 0;
     align-items: center;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    width: 100%;
 }
 .main-nav {
     list-style-type: none;
     display: flex;
-    margin-right: 200px;
+    background: #ffa9c6;
 }
 .nav-links {
     text-decoration: none;
-    color: black;
-    opacity: 0.6;
+    color: white;
+    opacity: 0.8;
     margin-left: 40px;
+    background: #ffa9c6;
 }
 .main-nav li {
     text-align: center;
     margin: 10px auto;
+    background: #ffa9c6;
 }
 .logo {
     font-size: 20px;
-    margin-left: 100px;
     text-decoration: none;
     float: left;
     padding-left: 5px;
     list-style-type: none;
-    color: black;
+    color: #d01741;
+    background: #ffa9c6;
 }
 .active {
     display: block;
@@ -112,9 +139,12 @@ a:active {
 a:hover {
     opacity: 100%;
 }
+/* Navbar slut */
 
+
+  
 /* Omslagsbild */
-.omslagsbildbild {
+.omslagsbild {
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -122,23 +152,113 @@ a:hover {
     height: 650px;
 }
 
-/* Text om glass */
 h1 {
     font-size: 48px;
     margin-top: 140px;
     text-align: center;
 }
+h2 {
+    font-size: 20pt;
+    font-weight: 600;
+}
 .om-glass {
     font-size: 16px;
     text-align: center;
-    margin-top: 1em;
-    margin-bottom: 140px;
-}
-
-h2 {
-    font-size: 360;
+    margin-top: 2em;
+    margin-bottom: 10px;
 }
 .beskrivning {
-    font-size: 40;
+    font-size: 14pt;
     font-weight: 700;
+    margin-bottom: 8px;
+}
+
+/*Ger tabellen en gräns, bestämmer dess bredd, ger tabellen symetriskt utseende*/
+table{
+    border-collapse: collapse;
+    width: 1000px;
+    border-collapse:separate;
+    table-layout: fixed;
+    border:solid black 1px;
+    border-spacing: 0px;  
+}
+
+/*Skapar en kant runt olika delar i tabellen, gör dess bredd automatisk, ger varje rad höjden 35px*/
+td{
+    border: 1px solid black;
+    width: auto;
+    height: 35px;
+}
+
+/*Gör att den högra texten i tabellen centreras*/
+td:nth-child(2), td:nth-child(3){
+    margin-left: 20px;
+    text-align: left;
+}
+
+/*Ger varannan rad i tabellen bakgrundsfärgen ljusblå*/
+tr:nth-child(odd){
+    background-color: lightblue;
+}
+
+/*Ändrar bakgrunds- och textfärgen på varannan rad i tabellen*/
+tr:nth-child(even){
+    background-color: rgb(226, 90, 90);
+    color: rgb(0, 0, 0);
+}
+
+/*Bestämmer tabellrubrikens textstorlek, vänsterjusterar texten, skapar en marginal under*/
+caption{
+    font-size: 22px;
+    text-align: left;
+    margin-bottom: 11px;
+}
+/*knapp*/
+a[href^="https://ingmanglass.se/glass-och-halsan/"]{
+    background-color: #a6e891;
+    color: white;
+    padding: 13px 32px;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 1em;
+    margin-bottom: 140px;
+    border-radius: 5px;
+    width:8%;
+    margin-left:46%;
+    margin-right:46%;
+}
+button {
+    background-color: #a6e891;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+.centrera {
+    margin-left: auto;
+    margin-right: auto;
+}
+caption {
+    font-size: 48px;
+    margin-top: 140px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+footer { 
+    background-color: #f0d1a5;
+    line-height: 25px;
+}
+.footer {
+    background-color: #f0d1a5;
+    color: black;
+}
+strong {
+    font-weight:600
+}
+.margin {
+    margin-bottom: 100px;
+}
+.produktbilder {
+    object-fit: contain;
 }

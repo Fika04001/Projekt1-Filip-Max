@@ -2,26 +2,53 @@
 <html lang="sv">
     <head>
         <meta charset="UTF-8">
-        <title>produkter</title>
+        <title>kontakt</title>
         <link rel="stylesheet" href="gladaglassar.css">
     </head>
     <body>
-        <div class="grid">
-            <!--Navbar-->
-            <section class="header navbar">
-                <!-- Navbar logga -->
-                <ul class="logo">
-                    <li><a href="index.html" class="logo">Glada Glassar</a></li>
-                </ul>
-                <!-- Navbar meny -->
-                <ul class="main-nav" id="main-nav">
-                    <li><a href="produkter.html" class="nav-links">Produkter</a></li>
-                    <li><a href="kontakt.html" class="nav-links">Kontakt</a></li>
-                </ul>
-            </section>
-            <section class="omslagsbild">
-                <img class="omslagsbildbild" src="https://www.glassmagasinet.se/wp-content/uploads/2018/05/glassmagasinet_07.jpg" alt="Glassbar">
-            </section>
-        </div>
+        <!--Navbar-->
+        <nav class="navbar">
+            <!-- Navbar logga -->
+            <ul class="logo">
+                <li><a href="index.html" class="logo">Glada Glassar</a></li>
+            </ul>
+            <!-- Navbar meny -->
+            <ul class="main-nav" id="main-nav">
+                <li><a href="produkter.html" class="nav-links">Produkter</a></li>
+                <li><a href="kontakt.html" class="nav-links">Kontakt</a></li>
+            </ul>
+        </nav>
+        <omslagsbild>
+            <img class="omslagsbildbild" src="https://www.glassmagasinet.se/wp-content/uploads/2018/05/glassmagasinet_07.jpg" alt="Glassbar">
+        </omslagsbild>
+        <!--Skapar en tabell i main-->
+        <omglass>
+            <table class="centrera">
+                <!--Ger tabellen en rubrik-->
+                <caption>Kontaktuppgifter</caption>
+                <tbody>
+                    <!--Skapar en rad i tabellen-->
+                    <tr>
+                        <!--Skapar två kolumner och skriver i dem-->
+                        <td>Telefonnummer</td>
+                        <td>XXX XXX XXX</td>
+                    </tr>
+                    <tr>
+                        <!--Skapar två kolumner i en ny rad och skriver i dem-->
+                        <td>Mailadress</td>
+                        <td>exempel@gmail.com</td>
+                    </tr>
+                    <tr>
+                        <!--Skapar två kolumner i tredje raden med text och en länk-->
+                        <td>Adress</td>
+                        <td><a href="https://www.google.com/maps?q=N%C3%A5gonstansv%C3%A4gen+27&um=1&ie=UTF-8&sa=X&ved=2ahUKEwjuh-Tj4tr1AhUqRPEDHRrLB70Q_AUoAXoECAEQAw" target="_blank">Någonstansvägen 27</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </omglass>
+        <footer>
+            <p class="footer">Glada Glassar</p>
+            <p class="footer">Någonstansvägen 27</p>
+        </footer> 
     </body>
 </html>
