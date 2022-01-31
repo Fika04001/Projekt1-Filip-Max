@@ -1,71 +1,94 @@
 <!DOCTYPE html>
 <html lang="sv">
     <head>
+        <!--Väljer vilken teckenkodning som ska användas--> 
         <meta charset="UTF-8">
-        <title>produkter</title>
+        <!--Bestämmer titel på sidan-->
+        <title>index</title>
+        <!--Kopplar CSS till HTML-filen-->
         <link rel="stylesheet" href="gladaglassar.css">
     </head>
     <body>
-        <!--Navbar-->
+        <!--Skapar en lista för navbar-->
         <nav class="navbar">
             <!-- Navbar logga -->
             <ul class="logo">
                 <li><a href="index.html" class="logo">Glada Glassar</a></li>
             </ul>
             <!-- Navbar meny -->
-            <ul class="main-nav" id="main-nav">
+            <ul class="main-nav">
                 <li><a href="produkter.html" class="nav-links">Produkter</a></li>
                 <li><a href="kontakt.html" class="nav-links">Kontakt</a></li>
             </ul>
         </nav>
+        <!--Lägger till den vänstra sektionen med en bild till den första produkten-->
         <vanster>
-            <img class="produktbilder" src="https://www.siaglass.se/media/2155/10101-graddglass-vanilj-5-l.jpg?width=800&height=600&bgcolor=fff" alt="Glasstrut" width="560px" height="560px">
+            <img class="produktbilder" src="https://www.siaglass.se/media/2155/10101-graddglass-vanilj-5-l.jpg?width=800&height=600&bgcolor=fff" alt="Vaniljglass" width="560px" height="560px">
         </vanster>
+        <!--Lägger till den högra sektionen med text om den första produkten-->
         <hoger>
+            <!--Produktnamn-->
             <h2>
                 Vanilj
             </h2>
+            <!--Avstånd mellan rubrik och text-->
             <br>
+            <!--"Introtext" om glassen-->
             <p class="beskrivning">
                 Svensk krämig gräddglass med äkta vaniljstång.
             </p>
+            <!--Text om ingredienserna med ev allergier markerade med <strong>-->
             <p>
                 <strong>Skummjölk*</strong>, <strong>grädde*</strong> (24%), glukossirap, socker*, druvsocker, vasslepulver (av <strong>mjölk)*</strong>, vaniljarom, vaniljkärnor, emulgeringsmedel (mono- och diglycerider av veg fettsyror), stabiliseringsmedel (fruktkärnmjöl, guarkärnmjöl). *Ursprung: Sverige. Vaniljarom och vaniljmärg är inte från Sverige. Grädde med 40% fetthalt.
             </p>
         </hoger>
+        <!--Lägger till den andra vänstra sektionen med text om den andra produkten-->
         <vanster1>
+            <!--Produktnamn-->
             <h2>
                 Jordgubb 
             </h2>
+            <!--Avstånd mellan rubrik och text-->
             <br>
+            <!--"Introtext" om glassen-->
             <p class="beskrivning">
                 Svensk krämig gräddglass med jordgubbssmak och jordgubbssylt.
             </p>
+            <!--Text om ingredienserna med ev allergier markerade med <strong>-->
             <p>
                 <strong>Skummjölk*</strong>, <strong>grädde*</strong> (21%), socker*, glukossirap, vasslepulver <br>(av <strong>mjölk)*</strong>, jordgubbar, druvsocker, vanilj- och jordgubbsarom, <br>färgämne (rödbetsrött, karotener, druvskalsextrakt), emulgeringsmedel <br>(mono- och diglycerider av veg fettsyror), stabiliseringsmedel <br>(fruktkärnmjöl, guarkärnmjöl, pektin), surhetsreglerande medel <br>(citronsyra). *Ursprung: Sverige. Jordgubbar är från Sverige och <br>EU. Grädde med 40% fetthalt.
             </p>
         </vanster1>
+        <!--Lägger till den andra högra sektionen med en bild till den andra produkten-->
         <hoger1>
-            <img class="produktbilder" src="https://www.siaglass.se/media/2156/10102-graddglass-jordgubb-5-l.jpg?width=800&height=600&bgcolor=fff" alt="Glasstrut" width="560px" height="560px">
+            <img class="produktbilder" src="https://www.siaglass.se/media/2156/10102-graddglass-jordgubb-5-l.jpg?width=800&height=600&bgcolor=fff" alt="Jordgubbsglass" width="560px" height="560px">
         </hoger1>
+        <!--Lägger till den tredje vänstra sektionen med en bild till den tredje produkten-->
         <vanster2>
-            <img class="produktbilder" src="https://www.siaglass.se/media/2159/10203-graddglass-choklad-5-l.jpg?width=800&height=600&bgcolor=fff" alt="Glasstrut" width="560px" height="560px">
+            <img class="produktbilder" src="https://www.siaglass.se/media/2159/10203-graddglass-choklad-5-l.jpg?width=800&height=600&bgcolor=fff" alt="Chokladglass" width="560px" height="560px">
         </vanster2>
+        <!--Lägger till den tredje högra sektionen med text om den tredje produkten-->
         <hoger2>
+            <!--Produktnamn-->
             <h2>
                 Choklad 
             </h2>
+            <!--Avstånd mellan rubrik och text-->
             <br>
+            <!--"Introtext" om glassen-->
             <p class="beskrivning">
                 Svensk krämig chokladgräddglass med kakaosås.
             </p>
+            <!--Text om ingredienserna med ev allergier markerade med <strong>-->
             <p>
                 <strong>Skummjölk*</strong>, <strong>grädde*</strong> (21%)*, glukossirap, socker, druvsocker, vasslepulver (av <strong>mjölk)*</strong>, rapsolja, kakaopulver (4%), vaniljarom, arom, emulgeringsmedel (mono- och diglycerider av veg fettsyror, solroslecitin), stabiliseringsmedel (fruktkärnmjöl, guarkärnmjöl). Kan innehålla spår av trädnötter, mandel, ägg, soja.
             </p>
         </hoger2>
+        <!--Skapar den sista sektionen, footer-->
         <footer>
+            <!--Lägger till den informationen som ska vara med-->
             <p class="footer">Glada Glassar</p>
-            <p class="footer">Någonstansvägen 27</p>
+            <p class="footer">Glassgränd</p>
         </footer> 
     </body>
 </html>
